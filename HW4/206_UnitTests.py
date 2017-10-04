@@ -176,13 +176,15 @@ class CardTests(unittest.TestCase):
 		self.assertEqual(len(p),3)
 		self.assertEqual(type(p[0]), str)
 
+## Test that if you create a card instance with suit 2, it will be suit "Clubs")
 	def test_myTestInstance1(self):
-		p = play_war_game()
-		self.assertEqual(type(p[0]), str)
-
+		c = Card(suit=1)
+		self.assertEqual(c.suit,"Clubs")
+## Test that if you invoke the __str__ method of a card instance that
+## is created with suit=1, rank=9, it returns the string "9 of Club"
 	def test_myTestInstance2(self):
-		p = play_war_game()
-		self.assertEqual(type(p[0]), str)
+		c = Card(suit=1, rank = 9)
+		self.assertEqual(str(c),"9 of Clubs")
 
 #############
 ## The following is a line to run all of the tests you include:
